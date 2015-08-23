@@ -6,7 +6,7 @@ library("data.table")
 library("dplyr")
 library("stringr")
 
-setwd("~/Code/R/Cleaning-Data-Assignment")
+# setwd("~/Code/R/Cleaning-Data-Assignment")
 
 ## The run_analysis function cleans and summarises data from the 
 ## Human Activity Recognition Using Smartphones Data Set at
@@ -21,6 +21,13 @@ setwd("~/Code/R/Cleaning-Data-Assignment")
 ##                  subject and activity variables. The remaining measurement variables
 ##                  have been changed to a more readable format
 ## 3. tidy_mean_output.txt -    This output is the end result of the analysis
+##
+##
+## Other files that are produces are:
+## 4. variables.csv -   A list of the variable names used in the output. This is useful
+##                      for writing the codebook
+## 5. tidy_mean_output.cvs  - this file is the same as tidy_mean_output.txt, but in csv format
+##
 
 run_analysis <- function() {
 
@@ -75,7 +82,6 @@ run_analysis <- function() {
     y_train <- read.table("./data/raw data/train/y_train.txt", header = FALSE, sep= " ", stringsAsFactors = FALSE)
     y_test <- read.table("./data/raw data/test/y_test.txt", header = FALSE, sep= " ", stringsAsFactors = FALSE)
     
-    
     ## Create the new id columns
     subject <- rbind(subject_train, subject_test)
     activities <- rbind(y_train, y_test)
@@ -104,7 +110,6 @@ run_analysis <- function() {
     
     #  write back the clean result
     write.table(interim_file, "./data/clean.csv", sep = ",", row.names = FALSE)
-    
     
     tidy_mean <- aggregate(interim_file[, -(1:2)], list(interim_file$activities, interim_file$volunteer), mean)
    
