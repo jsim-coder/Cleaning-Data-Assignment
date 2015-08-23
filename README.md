@@ -18,13 +18,14 @@ Interim and output data files are located in the **./data/** directory
 
 **tidy_mean_output.txt** - **This output is the end result of the analysis**
 
+**Codebook.md** - contains table information on the tidy_mean_output.txt output format
+
 ### R script files (./)
 **main.R** - A start stub that runs the data cleaning script "run_analysis.R"
 
 **run_analysis.R** - this is the repeatable script to clean the raw data and produce the tidy output data.
 
 ### Other files (./data/)
-**Codebook.md (./data/Codebook.md)** - contains table information on the tidy_mean_output.txt output format
 
 **tidy_mean_output.cvs** - This output is the end result of the analysis in csv format
 
