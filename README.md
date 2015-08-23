@@ -20,11 +20,14 @@ Interim and output data files are located in the **./data/** directory
 
 ### R script files (./)
 **main.R** - A start stub that runs the data cleaning script "run_analysis.R"
+
 **run_analysis.R** - this is the repeatable script to clean the raw data and produce the tidy output data.
 
 ### Other files (./data/)
 **Codebook.md (./data/Codebook.md)** - contains table information on the tidy_mean_output.txt output format
+
 **tidy_mean_output.cvs** - This output is the end result of the analysis in csv format
+
 **variables.csv** - A listing of the table variables - good for updating the codebook
 
 ## How to run the script
@@ -33,7 +36,7 @@ Update the main.R code to your local environment directory setting and run.
 source(run_analysis.R) in your custom code and call the function **run_analysis.R**
 
 ## The data cleaning approach
-This is a description of how the run_analysis function takes the raw data and create the final tidy output.
+This is a description of how the run_analysis() function takes the raw data and create the final tidy output.
 
 For further details, refer to the code comments.
 
